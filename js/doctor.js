@@ -14,4 +14,14 @@ Doctor.prototype.getDoctors = function(symptom, name, displayDoctors) {
     });
 };
 
+Doctor.prototype.getSpecialities = function(displaySpecialities) {
+  $.get('https://api.betterdoctor.com/2016-03-01/specialties?user_key=' + apiKey)
+    .then(function(result) {
+      displaySpecialities(result.data);
+    })
+    .fail(function(error) {
+      console.log("no specialties");
+    });
+};
+
 exports.doctorModule = Doctor;

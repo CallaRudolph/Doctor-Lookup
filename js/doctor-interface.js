@@ -10,10 +10,17 @@ var displayDoctors = function(doctors) {
   }
 };
 
+var displaySpecialities = function(specialities) {
+  specialities.forEach(function(specialty) {
+    $('#specialtyResponse').append("<li>" + specialty.name + "</li>");
+  });
+};
+
 $(document).ready(function() {
   $('.response').hide();
   $('#doctors').hide();
   var currentDoctorObject = new Doctor();
+
   $('#input').click(function() {
     var symptom = $('#symptom').val();
     var name = $('#name').val();
@@ -25,5 +32,9 @@ $(document).ready(function() {
     $('.symptom').text(symptom);
     $('.name').text(name);
     currentDoctorObject.getDoctors(symptom, name, displayDoctors);
+  });
+
+  $('#input2').click(function() {
+    currentDoctorObject.getSpecialities(displaySpecialities);
   });
 });
