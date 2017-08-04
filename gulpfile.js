@@ -7,6 +7,17 @@ var utilities = require('gulp-util');
 var del = require('del');
 var jshint = require('gulp-jshint');
 var buildProduction = utilities.env.production;
+var lib = require('bower-files')({
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/boostrap.js"
+      ]
+    }
+  }
+});
 
 
 gulp.task('jshint', function() {
@@ -31,10 +42,23 @@ gulp.task('jsBrowserify', ['concatInterface'], function() {
 gulp.task('minifyScripts', ['jsBrowserify'], function() {
   return gulp.src('./build/js/app.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./build/js'));
 });
 
+gulp.task('jsBower', function() {
+  return gulp.src(lib.ext('js').files)
+    .pipe(concat('vendor.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/js'));
+});
 
+gulp.task('cssBower', function() {
+  return gulp.src(lib.ext('css').files)
+    .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('./build/css'));
+});
+
+gulp.task('bower', ['jsBower', 'cssBower']);
 
 gulp.task('clean', function() {
   return del(['build', 'tmp']);
@@ -46,4 +70,5 @@ gulp.task('build', ['clean'], function() {
   } else {
     gulp.start('jsBrowserify');
   }
+  gulp.start('bower');
 });
