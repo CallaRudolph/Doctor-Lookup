@@ -12,7 +12,7 @@ var displayDoctors = function(doctors) {
 
 var displaySpecialities = function(specialities) {
   specialities.forEach(function(specialty) {
-    $('#specialtyResponse').append("<li>" + specialty.name + "</li>");
+    $('#specialtyResponse').append("<option value ='" + specialty.name + "'>" + specialty.name + "</option>");
   });
 };
 
