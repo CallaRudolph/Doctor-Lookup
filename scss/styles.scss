@@ -1,26 +1,52 @@
 $dark: #81717a;
 $mauve: #9d8ca1;
-$purple: #9993b2;
 $lilac: #a7abdd;
 $blue: #b4d4ee;
 $yellow: #eaf0ce;
+$red: #45050c;
+$border: .5px solid $lilac;
 
 body {
-  background-color: $dark;
+  background-image: url('/../scss/img/background.jpg');
+  background-position: bottom;
   font-family: 'Economica', sans-serif;
 }
 
 .jumbotron {
-  background-image: url('/../scss/img/monitor.jpg');
-  background-size: contain;
-  color: #B38CB4;
-  text-shadow: 1px 1px $yellow;
-  padding: .5px;
+  background-image: url('/../scss/img/jumbotron.jpg');
+  background-size: cover;
+  color: $red;
+  text-shadow: 1px 1px $mauve;
+  padding: 1px;
   margin-top: 3px;
-  border: 1px solid $lilac;
+  border: $border;
+}
+
+.header {
+  padding-left: 10px;
+  padding-bottom: 3px;
+  color: $red;
+  text-shadow: 1px 1px $yellow;
+  margin: 2px;
+  background-image: url('/../scss/img/jumbotron.jpg');
+  background-size: cover;
+  border: $border;
 }
 
 .response {
-  background-color: $mauve;
+  background-image: url('/../scss/img/response.jpeg');
+  background-size: cover;
+  color: black;
+  text-shadow: 1px 1px $blue;
   padding: 4px;
+  margin-bottom: 10px;
+  .link {
+    color: $lilac;
+    text-shadow: 1px 1px $red;
+  }
+}
+
+.btn-default {
+  background-color: $yellow;
+  color: $dark;
 }
