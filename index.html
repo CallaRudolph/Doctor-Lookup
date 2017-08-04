@@ -15,19 +15,20 @@
       </div>
       <div class="header">
         <h2>Ugh, we hate it when we're sick.</h2>
-        <h3>List out your symptom and we'll show you the doctors nearby who would love to help. Then use the link to Google to find more information on your selection.</h3>
+        <h3>List out your symptom and/or enter any part of the doctor's name, and we'll show you the doctors nearby who would love to help. Then use the link to Google to find more information on your doctor selection.</h3>
       </div><br>
       <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-3">
           <div class="form">
-            <h3><input type="text" placeholder="List symptom" id="symptom"><br><br>
+            <h3><input type="text" placeholder="Enter symptom" id="symptom"><br>
+            <h3><input type="text" placeholder="Enter any of doc's name" id="name"><br><br>
             <button class="btn-default" id="input">Look for doctor</button></h3>
           </div>
         </div>
         <div class="col-md-6">
           <div class="response">
-            <h4>We are sorry to hear about your symptom of <em><span class="symptom"></span></em>.</h4>
+            <h4>We are sorry to hear about your symptom of "<em><span class="symptom"></span></em>". Let's see if there is a doctor with the name of "<em><span class="name"></span></em>" who can help...</h4>
             <h2>Here are the doctors nearby who can help you:</h2>
             <h4><ul class="list-unstyled" id="doctors"></ul></h4>
             <h4>Search for more information on any doctor using the <a class="link" href="https://www.google.com">Googler</a>.</h4>
