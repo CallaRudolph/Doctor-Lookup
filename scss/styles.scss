@@ -1,0 +1,18 @@
+$dark: #81717a;
+$mauve: #9d8ca1;
+$purple: #9993b2;
+$lilac: #a7abdd;
+$blue: #b4d4ee;
+
+body {
+  background-color: $dark;
+}
+
+.jumbotron {
+  background-image: url('/../scss/img/monitor.jpg');
+  background-size: contain;
+  color: $blue;
+  text-shadow: 1.5px 1.5px $dark;
+  padding: .5px;
+  margin-top: 3px;
+}
