@@ -65,7 +65,7 @@ gulp.task('clean', function() {
   return del(['build', 'tmp']);
 });
 
-gulp.task('build', ['clean'], function() {
+gulp.task('build', ['clean', 'jshint'], function() {
   if (buildProduction) {
     gulp.start('minifyScripts');
   } else {
