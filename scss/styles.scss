@@ -3,16 +3,24 @@ $mauve: #9d8ca1;
 $purple: #9993b2;
 $lilac: #a7abdd;
 $blue: #b4d4ee;
+$yellow: #eaf0ce;
 
 body {
   background-color: $dark;
+  font-family: 'Economica', sans-serif;
 }
 
 .jumbotron {
   background-image: url('/../scss/img/monitor.jpg');
   background-size: contain;
-  color: $blue;
-  text-shadow: 1.5px 1.5px $dark;
+  color: #B38CB4;
+  text-shadow: 1px 1px $yellow;
   padding: .5px;
   margin-top: 3px;
+  border: 1px solid $lilac;
+}
+
+.response {
+  background-color: $mauve;
+  padding: 4px;
 }
