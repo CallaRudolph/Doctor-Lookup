@@ -7,12 +7,15 @@ var displayDoctors = function(doctors) {
 };
 
 $(document).ready(function() {
+  $('.response').hide();
   $('#doctors').hide();
   var currentDoctorObject = new Doctor();
   $('#input').click(function() {
-    $('#doctors').empty();
-    $('#doctors').show();
     var symptom = $('#symptom').val();
+    $('#doctors').empty();
+    $('.response').show();
+    $('#doctors').show();
+    $('.symptom').text(symptom);
     currentDoctorObject.getDoctors(symptom, displayDoctors);
   });
 });

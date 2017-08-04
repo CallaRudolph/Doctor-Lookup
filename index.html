@@ -9,12 +9,16 @@
   </head>
   <body>
     <div class="container">
-      <h1>What's wrong?</h1>
+      <h1>What's wrong?</h1><br>
       <div class="form">
         <input type="text" placeholder="List symptom" id="symptom">
         <button class="btn-info" id="input">Look for Dr.</button>
+      </div><br>
+      <div class="response">
+        <h5>We are sorry to hear about your symptom of <em><span class="symptom"></span></em>.</h5>
+        <h4>Here are the doctors nearby who can help you:</h4>
+        <ul id="doctors"></ul>
       </div>
-      <ul id="doctors"></ul>
     </div>
   </body>
 </html>
