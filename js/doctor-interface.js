@@ -16,6 +16,7 @@ $(document).ready(function() {
   var currentDoctorObject = new Doctor();
   $('#input').click(function() {
     var symptom = $('#symptom').val();
+    $('#symptom').val("");
     $('#doctors').empty();
     $('.response').show();
     $('#doctors').show();
