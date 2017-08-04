@@ -2,7 +2,7 @@ var Doctor = require('./../js/doctor.js').doctorModule;
 
 var displayDoctors = function(doctors) {
   doctors.forEach(function(doctor) {
-    $('#doctors').append("<li>" + doctor.profile.first_name + " " + doctor.profile.last_name + ", " + doctor.profile.title + "</li>");
+    $('#doctors').append("<li>" + "<img src='" + doctor.profile.image_url + "'>" + doctor.profile.first_name + " " + doctor.profile.last_name + ", " + doctor.profile.title + "</li><br>");
   });
 };
 
