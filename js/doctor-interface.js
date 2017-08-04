@@ -19,6 +19,7 @@ var displaySpecialities = function(specialities) {
 $(document).ready(function() {
   $('.response').hide();
   $('#doctors').hide();
+  $('#specialtyResponse').hide();
   var currentDoctorObject = new Doctor();
 
   $('#input').click(function() {
@@ -35,6 +36,7 @@ $(document).ready(function() {
   });
 
   $('#input2').click(function() {
+    $('#specialtyResponse').show();
     currentDoctorObject.getSpecialities(displaySpecialities);
   });
 });

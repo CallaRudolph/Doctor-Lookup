@@ -15,18 +15,23 @@
       </div>
       <div class="header">
         <h2>Ugh, we hate it when we're sick.</h2>
-        <h3>List out your symptom and/or enter any part of the doctor's name, and we'll show you the doctors nearby who would love to help. Then use the link to Google to find more information on your doctor selection.</h3>
+        <h3>List out your symptom and/or enter any part of the doctor's name, and we'll show you the doctors nearby who would love to help. Check out the list of specialities if you're looking for search help re: your symptom. Then use the link to Google to find more information on your doctor selection.</h3>
       </div><br>
       <div class="row">
         <div class="col-md-1"></div>
-        <div class="col-md-3">
+        <div class="col-md-4">
+          <div class="specialty">
+            <h3><button class="btn-default" id="input2">Click here to list all specialities</button></h3>
+            <h5><select id="specialtyResponse"></select></h5>
+          </div>
           <div class="form">
             <h3><input type="text" placeholder="Enter symptom" id="symptom"><br>
             <h3><input type="text" placeholder="Enter any of doc's name" id="name"><br><br>
             <button class="btn-default" id="input">Look for doctor</button></h3>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
           <div class="response">
             <h4>We are sorry to hear about your symptom of "<em><span class="symptom"></span></em>". Let's see if there is a doctor with the name of "<em><span class="name"></span></em>" who can help...</h4>
             <h2>Here are the doctors nearby who can help you:</h2>
@@ -35,12 +40,7 @@
             <h4><em>Shout out to <a class="link" href="https://developer.betterdoctor.com/">BetterDoctor API</a> for assisting with the search.</em></h4>
           </div>
         </div>
-        <div class="col-md-2"></div>
-        <div class="specialty">
-          <h3><label for="specialty">Retrieve list of specialities</label><br><br>
-          <button class="btn-default" id="input2">List specialities</button></h3>
-        </div>
-        <h5><select id="specialtyResponse"></select></h5>
+        <div class="col-md-1"></div>
       </div>
     </div>
   </body>
