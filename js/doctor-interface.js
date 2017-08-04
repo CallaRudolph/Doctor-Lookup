@@ -1,5 +1,11 @@
 var Doctor = require('./../js/doctor.js').doctorModule;
 
+var displaySpecialities = function(specialities) {
+  specialities.forEach(function(specialty) {
+    $('#specialtyResponse').append("<option value ='" + specialty.name + "'>" + specialty.name + "</option>");
+  });
+};
+
 var displayDoctors = function(doctors) {
   if (doctors.length === 0) {
     $('#doctors').append("Sorry, your symptom is incurable by a doctor with that name. Maybe try another symptom or doc.<br><br><br>");
@@ -10,19 +16,15 @@ var displayDoctors = function(doctors) {
   }
 };
 
-var displaySpecialities = function(specialities) {
-  specialities.forEach(function(specialty) {
-    $('#specialtyResponse').append("<option value ='" + specialty.name + "'>" + specialty.name + "</option>");
-  });
-};
-
 $(document).ready(function() {
-  $('.response').hide();
-  $('#doctors').hide();
-  $('#specialtyResponse').hide();
   var currentDoctorObject = new Doctor();
 
-  $('#input').click(function() {
+  $('#specialty').click(function() {
+    $('#specialtyResponse').show();
+    currentDoctorObject.getSpecialities(displaySpecialities);
+  });
+
+  $('#search').click(function() {
     var symptom = $('#symptom').val();
     var name = $('#name').val();
     $('#symptom').val("");
@@ -33,10 +35,5 @@ $(document).ready(function() {
     $('.symptom').text(symptom);
     $('.name').text(name);
     currentDoctorObject.getDoctors(symptom, name, displayDoctors);
-  });
-
-  $('#input2').click(function() {
-    $('#specialtyResponse').show();
-    currentDoctorObject.getSpecialities(displaySpecialities);
   });
 });

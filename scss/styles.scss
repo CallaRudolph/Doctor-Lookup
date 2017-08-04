@@ -34,6 +34,7 @@ body {
 }
 
 .response {
+  display: none;
   background-image: url('/../scss/img/response.jpeg');
   background-size: cover;
   color: black;
@@ -49,4 +50,12 @@ body {
 .btn-default {
   background-color: $yellow;
   color: $dark;
+}
+
+#doctors {
+  display: none;
+}
+
+#specialtyResponse {
+  display: none;
 }
