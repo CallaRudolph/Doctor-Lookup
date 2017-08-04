@@ -26,11 +26,17 @@ body {
   padding-left: 10px;
   padding-bottom: 3px;
   color: $red;
-  text-shadow: 1px 1px $yellow;
+  text-shadow: 1px 1px $blue;
   margin: 2px;
   background-image: url('/../scss/img/jumbotron.jpg');
   background-size: cover;
   border: $border;
+}
+
+#input {
+  border: $border;
+  background-image: url('/../scss/img/response.jpeg');
+  background-size: cover;
 }
 
 .response {
@@ -41,9 +47,10 @@ body {
   text-shadow: 1px 1px $blue;
   padding: 4px;
   margin-bottom: 10px;
+  border: $border;
   .link {
-    color: $lilac;
-    text-shadow: 1px 1px $red;
+    color: $red;
+    text-shadow: 1px 1px $yellow;
   }
 }
 
