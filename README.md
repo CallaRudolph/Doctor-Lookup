@@ -4,8 +4,6 @@
 
 By _Calla Rudolph_ [(e-mail me here)](<mailto:callarudolph@gmail.com>)
 
-This website has been deployed for easy viewing: https://doctor-lookup.firebaseapp.com
-
 ## Description
 
 This app allows the user to enter a symptom or doctor name and view a list of corresponding doctors (with image) found in the Portland area. The app uses the [BetterDoctorAPI](https://developer.betterdoctor.com/) to retrieve results. The user can also view a list of specialities from the database. If there are no matches from the search, an error message appears.
