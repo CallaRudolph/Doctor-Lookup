@@ -39,15 +39,14 @@ You will need your own API Key from [`BetterDoctorAPI`](https://developer.better
 
 ## Setup/Installation
 
-* `Open GitHub site` on your browser: https://github.com/CallaRudolph/doctor
-* Select the dropdown (green box) `"Clone or download"`
-* `Copy` the link for the `GitHub repository`
-* Open `Terminal` on your computer
-* In Terminal, `perform the following steps`:
+* Open GitHub site on your browser: https://github.com/CallaRudolph/Doctor-Lookup
+* Select the dropdown (green box) "Clone or download"
+* Copy the link for the GitHub repository
+* Open Terminal on your computer and perform the following steps:
 ````
   $ cd desktop
   $ git clone <paste repository link>
-  $ cd doctor
+  $ cd Doctor-Lookup
   $ npm install
   $ bower install
   $ gulp build
